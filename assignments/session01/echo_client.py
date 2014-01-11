@@ -42,8 +42,8 @@ def client(msg, log_buffer=sys.stderr):
         done = False
         while not done:
             chunk = sock.recv(16)
+            print >>log_buffer, 'received "{0}"'.format(chunk)
             if len(chunk) < 16:
-                print >>log_buffer, 'received "{0}"'.format(chunk)
                 done = True
             my_msg += chunk
             
