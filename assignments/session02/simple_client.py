@@ -20,7 +20,7 @@ def client(msg):
             if len(chunk) < bufsize:
                 done = True
             response += chunk
-        print >>sys.stderr, 'received "{0}"'.format(response)
+#        print >>sys.stderr, 'received "{0}"'.format(response)
     finally:
         print >>sys.stderr, 'closing socket'
         sock.close()
